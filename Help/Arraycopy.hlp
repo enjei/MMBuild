@@ -1,0 +1,18 @@
+[1;33mArrayCopy[0m
+[1;44m                                                                                [0m
+
+Format: [1m/arraycopy [0m{[1;35marray name[0m} {[1;35mcopy name[0m} {[1;35mcopy group name[0m}
+
+ArrayCopy lets you copy arrays and their contents into a new array.
+
+   þ {[1;35marray name[0m} The name of the existing array.
+   þ {[1;35mcopy name[0m}  The name of the new array which is a copy of the existing array.
+   þ {[1;35mgroup name[0m} This is optional, see the user guide for help with groups.
+
+Example:
+
+/arraycopy [0m{[1;35mRegexSubMatches[0m} {[1;35mMatchedText[0m} {[1;35mMyArrays[0m}
+This would create an array called MatchedText which is a copy of the RegexSubMatches array
+at that time.
+
+[1;44m                                                                                [0m

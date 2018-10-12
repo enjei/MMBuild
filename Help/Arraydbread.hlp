@@ -1,0 +1,25 @@
+[1;33m[1;33mArrayDBRead[0m
+[1;44m                                                                                [0m
+
+Format: [1m/ArrayDBRead [0m{[1;35marray name[0m} [0m{[1;35mdatabase connect string[0m} [0m{[1;35mdb user[0m} [0m{[1;35mdb password[0m}
+
+Reads the data matching the named array. The array must be defined with the
+/array command before the read and the dimensions must at least match the data
+stored.
+
+   þ {[1;35marray name[0m} The name of the array.
+   þ {[1;35mdatabase connect string[0m} In the case of MS Access this would be the full
+     path of the database you want to use. For MySQL:
+     Server=myServerAddress;Port=1234;Database=myDataBase;Uid=myUsername;
+     Pwd=myPassword;
+     For MS SqlServer:
+     Server=myServerAddress;Database=myDataBase;User ID=myUsername;
+     Password=myPassword;Trusted_Connection=False;
+     For DSN based databases check out:
+     http://www.connectionstrings.com/dsn
+     In the case of Excel users this would be the full path of the database you
+     want to use.
+   þ {[1;35mdb user[0m} Username needed to access the database file.
+   þ {[1;35mdb password[0m} Password needed to access the database file.
+
+[1;44m                                                                                [0m

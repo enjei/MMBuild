@@ -1,0 +1,19 @@
+[1;33mChatExcludeServe[0m
+[1;44m                                                                                [0m
+
+Format: [1m/chatexcludeserve [0m{[1;35mchat name or chat connection number[0m}
+
+The new chat property ExcludeServe is toggled by 
+/chatExcludeServe {chatname or number}. The property defaults to false which
+means not excluded. When you  want to set a chat connection so it will not
+be sent "chat to everyones" received from other chat connections you are 
+serving you set their ExcludeServe to true.
+
+   þ {[1;35mChat name or number[0m} The chat name of an existing chat connection
+                            or its number.
+
+Example:
+
+/chatexcludeserve [0m{[1;35mLaho[0m}
+
+[1;44m                                                                                [0m

@@ -1,0 +1,36 @@
+[1;33m@RegexArray[0m
+[1;44m                                                                                [0m
+
+Format: [1m@RegexArray(search pattern,array name)[0m
+
+RegexArray returns the row number or row and column number for the first array
+element that matches the pattern. Returns 0 if no match is found.
+
+   þ search pattern - search pattern to enter in Regular Expression format. For
+     more information on Regular Expression please visit: 
+     http://www.boost.org/doc/libs/1_37_0/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html
+   þ array name - The name of the array from which you want to get the cell
+     value.
+
+Examples:
+
+@RegexArray(.*balm.*,ItemStuff)
+Might return 7,1.
+
+@Left(@RegexArray(.*balm.*,ItemStuff),@StrStr(@RegexArray(.*balm.*,ItemStuff),@Chr(44)))
+If @RegexArray returns 7,1 for @StrStr(@RegexArray(.*balm.*,ItemStuff), then
+this will show you just the first number.
+
+@Right(@RegexArray(.*balm.*,ItemStuff),@StrStrRev(@RegexArray(.*balm.*,ItemStuff),@Chr(44)))
+If @RegexArray returns 7,1 for @StrStr(@RegexArray(.*balm.*,ItemStuff), then
+this will show you just the column, which in this case is 7.
+
+@Right(@RegexArray(.*balm.*,ItemStuff),@Math(@StrStrRev(@RegexArray(.*balm.*,ItemStuff),@Chr(44))+1))
+If @RegexArray returns 7,1 for @StrStr(@RegexArray(.*balm.*,ItemStuff), then
+this will show you just the row, which in this case is 1.
+
+*Notice on these previous 2 examples the use of @Chr(44), @Chr(44) is the Chr
+code for a comma, and since @StrStr(@RegexArray(.*balm.*,ItemStuff),,) won't
+work, this is how you get around it.
+
+[1;44m                                                                                [0m

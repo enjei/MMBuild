@@ -1,0 +1,9 @@
+[1;33m@Regex[0m
+[1;44m                                                                                [0m
+
+Format: [1m@Regex(Regular expression, String to match)[0m
+
+Regex uses a regular expression to try to match the string provided. If there
+is a match it returns 1 otherwise 0.
+
+[1;44m                                                                                [0m

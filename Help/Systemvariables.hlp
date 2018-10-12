@@ -1,0 +1,34 @@
+[1;33mSystem Variables[0m
+[1;44m                                                                                [0m
+
+$ANSICopy
+This holds the Full ANSI color clipboard information.
+
+$TimeSinceLastInput
+Tells you amount of seconds since you last had an input.
+
+$LoopCount
+Used with the Loop command it has your current Loop number.
+
+$ForeColor
+Keeps track of the current text color. Could be used in an /if statement to
+validate a color of a trigger.
+
+$ListItem
+This is the variable to use when using list procedures. It holds the value of
+the current list item when cycling through the list.
+
+$LoopCount
+When using the /loop command this is the current value of the loop.
+
+$CmdsProcessed
+This is the number of commands and procedures Mud Master has processed since
+the session file was opened.
+
+$LinesReceived
+This is the number of lines received from the mud since the session was opened.
+
+$BytesReceived
+This is the number of bytes received from the mud since the session was opened.
+
+[1;44m                                                                                [0m
