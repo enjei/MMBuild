@@ -23,8 +23,9 @@
 ; Inno Setup Compiler 5.6.1
 
 [Setup]
+AppId={{06FE2E31-8610-43F4-AC45-BCF17AF7546D}
 AppName=Medievias MudMaster
-AppVersion=4.28b18
+AppVersion=4.22b1
 DefaultDirName={localappdata}\Medievias MudMaster
 DefaultGroupName=Medievias MudMaster
 UninstallDisplayIcon={localappdata}\Medievias MudMaster
@@ -40,6 +41,9 @@ Name: "{app}\Help"
 Name: "{app}\Logs"
 Name: "{app}\Transfers"
 Name: "{app}\Scripts"
+
+[Tasks]
+Name: "shortcuticon"; Description: "Create shortcut to Scripts folder"; GroupDescription: "Additional Icons"; Flags: unchecked
 
 [Files]
 Source: "MudMaster.exe";            DestDir: "{app}"
@@ -59,7 +63,8 @@ Source: "MedSansMono.ttf";          DestDir: "{fonts}"; FontInstall: "Medievia S
 [Icons]
 Name: "{group}\MudMaster"; Filename: "{app}\MudMaster.exe"
 Name: "{group}\Uninstall"; Filename: "{app}\unins000.exe"
-Name: "{commondesktop}\Medievia's MudMaster"; Filename: "{app}\MudMaster.exe"
+Name: "{commondesktop}\Medievias MudMaster"; Filename: "{app}\MudMaster.exe"
+Name: "{commondesktop}\MM Scripts"; Filename: "{app}\Scripts"; Tasks: shortcuticon
 
 [Run]
 Filename: "{app}\MudMaster.exe"; Description: "Launch Medievia's MudMaster after install"; Flags: postinstall nowait skipifsilent
