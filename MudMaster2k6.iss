@@ -57,14 +57,17 @@ Source: "Scripts\*";                DestDir: "{app}\Scripts"
 Source: "MFC71.dll";                DestDir: "{app}"
 Source: "msvcp71.dll";              DestDir: "{app}"
 Source: "Msvcr71.dll";              DestDir: "{app}"
-Source: "Medievia.fon";             DestDir: "{fonts}"; FontInstall: "Medievia"; Flags: fontisnttruetype onlyifdoesntexist uninsneveruninstall
+Source: "Medievia.fon";             DestDir: "{fonts}"; FontInstall: "Medievia"; Flags: onlyifdoesntexist fontisnttruetype uninsneveruninstall
 Source: "MedSansMono.ttf";          DestDir: "{fonts}"; FontInstall: "Medievia Sans Mono"; Flags: onlyifdoesntexist uninsneveruninstall
+Source: "MedC.fon";                 DestDir: "{fonts}"; FontInstall: "Medievia C"; Flags: onlyifdoesntexist fontisnttruetype uninsneveruninstall
+Source: "MedFS.fon";                DestDir: "{fonts}"; FontInstall: "Medievia FS"; Flags: onlyifdoesntexist uninsneveruninstall
+Source: "MedT.fon";                 DestDir: "{fonts}"; FontInstall: "Medievia T"; Flags: onlyifdoesntexist fontisnttruetype uninsneveruninstall
 
 [Icons]
-Name: "{group}\MudMaster"; Filename: "{app}\MudMaster.exe"
-Name: "{group}\Uninstall"; Filename: "{app}\unins000.exe"
-Name: "{commondesktop}\Medievias MudMaster"; Filename: "{app}\MudMaster.exe"
-Name: "{commondesktop}\MM Scripts"; Filename: "{app}\Scripts"; Tasks: shortcuticon
+Name: "{group}\MudMaster";                    Filename: "{app}\MudMaster.exe"
+Name: "{group}\Uninstall MudMaster";          Filename: "{app}\unins000.exe"
+Name: "{commondesktop}\Medievias MudMaster";  Filename: "{app}\MudMaster.exe"
+Name: "{commondesktop}\MM Scripts";           Filename: "{app}\Scripts"; Tasks: shortcuticon
 
 [Run]
 Filename: "{app}\MudMaster.exe"; Description: "Launch Medievia's MudMaster after install"; Flags: postinstall nowait skipifsilent
